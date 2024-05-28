@@ -1,3 +1,5 @@
 class SessionsController < ApplicationController
-  def new; end
+  def new
+    @user = User.find(session[:user_id]) if session[:user_id]
+  end
 end
