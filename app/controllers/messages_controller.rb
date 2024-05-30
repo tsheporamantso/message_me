@@ -3,12 +3,8 @@ class MessagesController < ApplicationController
 
   def create
     @message = current_user.messages.build(message_params)
-    if @message.save
-      redirect_to root_path
-    else
-      flash[:error] = 'Something went wrong'
-      redirect_to root_path
-    end
+    flash[:error] = 'Something went wrong' unless @message.save
+    redirect_to root_path
   end
 
   private
