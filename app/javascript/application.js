@@ -7,9 +7,14 @@ import "semantic-ui"
 
 $(document).on('turbo:load', function() {
   console.log('loaded turbo links')
-  $('.ui.dropdown').dropdown();
-  $('.message .close').on('click', function() {
-    $(this).closest('.message').transition('fade');
-  });
+  $('.ui.dropdown').dropdown()
 });
-import "channels"
+
+// $(document).on('turbo:load', function() {
+//   console.log('loaded turbo links')
+//   $('.ui.dropdown').dropdown();
+//   $('.message .close').on('click', function() {
+//     $(this).closest('.message').transition('fade');
+//   });
+// });
+// import "channels"
